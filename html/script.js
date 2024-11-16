@@ -6,7 +6,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
     const telefone = document.getElementById('telefone').value;
     const senha = document.getElementById('senha').value;
 
-    fetch("http://localhost:8080/usuario", { 
+    fetch("http://191.234.182.150:8080/usuario", { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('loginEmail').value;
     const senha = document.getElementById('loginSenha').value;
 
-    fetch("http://localhost:8080/usuario/login", { 
+    fetch("http://191.234.182.150:8080/usuario/login", { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
