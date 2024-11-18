@@ -5,7 +5,7 @@ FROM nginx:alpine
 COPY html /usr/share/nginx/html
 
 # Expor a porta 3000, pois é a desejada para o acesso externo
-EXPOSE 3000
+EXPOSE 8080
 
 # Definir o comando padrão para iniciar o Nginx
 CMD ["nginx", "-g", "daemon off;"]
