@@ -1,12 +1,13 @@
-document.getElementById('createUserForm').addEventListener('submit', function(event) {
+document.getElementById('createUser Form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const usuario = document.getElementById('usuario').value;
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
     const senha = document.getElementById('senha').value;
+    const estado = document.getElementById('estado').value; // Adiciona a coleta do estado
 
-    fetch("http://191.234.182.150:8080/usuario", { 
+    fetch("http://191.232.247.70:8080/usuario", { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -15,7 +16,8 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
             usuario: usuario, 
             email: email, 
             telefone: telefone, 
-            senha: senha 
+            senha: senha,
+            estado: estado // Adiciona o estado ao corpo da requisição
         })
     })
     .then(response => response.json())
@@ -35,7 +37,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('loginEmail').value;
     const senha = document.getElementById('loginSenha').value;
 
-    fetch("http://191.234.182.150:8080/usuario/login", { 
+    fetch("http://191.232.247.70:8080/usuario/login", { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
